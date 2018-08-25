@@ -1,0 +1,25 @@
+version: "3"
+networks:
+  chat:
+
+services:
+  # Redis for socket.io message broker
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+  
+  # The application image
+  app:
+    depends_on:
+      - redis
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    volumes:
+      - .:/usr/src/app
+    environment:
+      ENV_NAME: dev
+      REDIS_URI: redis
+    ports:
+      - 3000:3000
