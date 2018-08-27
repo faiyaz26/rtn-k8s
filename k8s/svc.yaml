@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rtn-k8s-service
+  labels:
+    app: rtn-k8s
+spec:
+  ports:
+  - port: 80
+    targetPort: 3000
+    protocol: TCP
+  type: LoadBalancer
+  selector:
+    app: rtn-k8s
