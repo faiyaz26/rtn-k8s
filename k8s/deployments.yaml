@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rtn-k8s-deployment
+  labels:
+    app: rtn-k8s
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rtn-k8s
+  template:
+    metadata:
+      labels:
+        app: rtn-k8s
+    spec:
+      containers:
+      - name: rtn-k8s
+        image: gcr.io/rtn-k8s/rtn-k8s:1.0
+        ports:
+        - containerPort: 3000
