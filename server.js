@@ -12,6 +12,9 @@ app.use(bodyParser.json()); // for parsing application/json
 
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
+const redisAdapter = require('socket.io-redis');
+
+io.adapter(redisAdapter({ host: config.REDIS_HOST, port: 6379 }));
 
 // for serving the static client files 
 app.use(express.static(path.join(__dirname, 'public')));

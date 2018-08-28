@@ -20,6 +20,6 @@ services:
       - .:/usr/src/app
     environment:
       ENV_NAME: dev
-      REDIS_URI: redis
+      REDIS_HOST: redis
     ports:
       - 3000:3000
