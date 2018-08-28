@@ -10,5 +10,6 @@ spec:
     targetPort: 3000
     protocol: TCP
   type: LoadBalancer
+  sessionAffinity: ClientIP
   selector:
     app: rtn-k8s
