@@ -5,7 +5,7 @@ metadata:
   labels:
     app: rtn-k8s
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: rtn-k8s
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: rtn-k8s
-        image: gcr.io/rtn-k8s/rtn-k8s:1.0
+        image: gcr.io/rtn-k8s/rtn-k8s:1.1
         ports:
         - containerPort: 3000

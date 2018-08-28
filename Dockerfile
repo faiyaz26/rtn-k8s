@@ -10,7 +10,7 @@ COPY server.js .
 RUN npm install
 
 ENV ENV_NAME prod
-ENV REDIS_URL redis
+ENV REDIS_HOST redis-master.default.svc.cluster.local
 
 EXPOSE 3000
 
