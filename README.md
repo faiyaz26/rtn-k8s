@@ -10,7 +10,7 @@ To run and develop locally you can use Docker-Compose.
 docker-compose up --build
 ```
 
-Technology/tools used
+### Technology/tools used
 1. Node.JS
 2. Socket.io
 3. Redis
@@ -18,3 +18,8 @@ Technology/tools used
 5. Docker
 6. Kubernetes
 7. Vue.js
+
+
+### Screenshot
+
+[<img src="https://i.imgur.com/L6ntH6I.gif">](RTN-k8s)
